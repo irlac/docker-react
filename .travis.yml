@@ -3,6 +3,9 @@ sudo: required
 services:
 - docker
 before_install:
+- openssl aes-256-cbc -K $encrypted_586b8f6db0f0_key -iv $encrypted_586b8f6db0f0_iv
+  -in docker-react-test-2d4df9b343d2.json.enc -out docker-react-test-2d4df9b343d2.json
+  -d
 - openssl aes-256-cbc -K $encrypted_0782709df8b0_key -iv $encrypted_0782709df8b0_iv
   -in docker-react-test-2d4df9b343d2.json.enc -out .\\docker-react-test-2d4df9b343d2.json
   -d
